@@ -1,0 +1,39 @@
+body 
+{
+    padding-left: 650px;
+    padding-right: 650px;
+    background-image: url("imagemaison1.jpg");
+    margin-top: 8rem;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+}
+fieldset 
+{
+    border: 2px solid #2BEDCB;
+    width: 500px;
+    height: 150px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #A0CFCD;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    overflow: auto;
+}
+.task 
+{
+    height: 200px;    
+}
+p
+{
+    color: #1190E8;
+}
+.barre
+{
+    text-decoration: line-through;
+}
+h1 
+{
+    text-align: center;
+    font-size: 60px;
+    color: #ffffff;
+}
