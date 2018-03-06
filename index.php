@@ -3,6 +3,7 @@
 try {
     //je me connecte a MySQL
     $bdd = new PDO('mysql:host=localhost;dbname=todoliste;charset=utf8', 'root', 'user');
+    /*$bdd = new PDO('mysql:host=localhost;dbname=id4927463_todoliste;charset=utf8', 'id4927463_mysql', 'flocon1992');*/
 }   
 
 catch(Exception $erreur) {
@@ -24,12 +25,13 @@ catch(Exception $erreur) {
   /*fin Sanitisation*/
   //Requête POST:
   //vérification des valeurs après la Sanitisation
-  if($result != null && $result != FALSE && $_SERVER['REQUEST_METHOD']=='POST')
+  $result['tache'] = trim($result['tache']);
+  if($result['tache'] != null && $result != FALSE && $_SERVER['REQUEST_METHOD']=='POST' && !empty($result['tache']))
   {
-
+    print_r($result);
     if(isset($_POST["submit"])){
 
-      $tache=$_POST["tache"];
+      $tache=$result["tache"];
       insertmysql($tache, "false");
     }
 
